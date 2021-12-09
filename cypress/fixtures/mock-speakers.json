@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Antonin Founeau",
+        "profilePic": "/assets/img/speakers/bear.jpg",
+        "twitter": "ionicframework",
+        "about": "Bricodeur.",
+        "location": "Nantes",
+        "email": "antonin@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 2,
+        "name": "Debbie O'Brien",
+        "profilePic": "/assets/img/speakers/cheetah.jpg",
+        "twitter": "ionicframework",
+        "about": "A little Bit.",
+        "location": "Espagne",
+        "email": "debbie@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 3,
+        "name": "Elad Shechter",
+        "profilePic": "/assets/img/speakers/duck.jpg",
+        "twitter": "ionicframework",
+        "about": "Elad is a Gamer.",
+        "location": "Portugal",
+        "email": "elad@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 4,
+        "name": "Jérôme Lucas",
+        "profilePic": "/assets/img/speakers/eagle.jpg",
+        "twitter": "ionicframework",
+        "about": "4 Digital Better.",
+        "location": "Nantes",
+        "email": "jreome@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 5,
+        "name": "Ronan Robe",
+        "profilePic": "/assets/img/speakers/elephant.jpg",
+        "twitter": "ionicframework",
+        "about": "4 Digital Better.",
+        "location": "Nantes",
+        "email": "ronan@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 6,
+        "name": "M4DZ",
+        "profilePic": "/assets/img/speakers/giraffe.jpg",
+        "twitter": "ionicframework",
+        "about": "Deno is not Node.",
+        "location": "Lyon",
+        "email": "m4dz@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 7,
+        "name": "Maxence Levebvre",
+        "profilePic": "/assets/img/speakers/iguana.jpg",
+        "twitter": "ionicframework",
+        "about": "Isabella is an Iguana.",
+        "location": "Lille",
+        "email": "maxence@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 8,
+        "name": "Cécile Freyd-Foucault",
+        "profilePic": "/assets/img/speakers/kitten.jpg",
+        "twitter": "ionicframework",
+        "about": "Karl is a Kitten.",
+        "location": "Paris",
+        "email": "cecile@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 9,
+        "name": "Charles-Henri Guérin",
+        "profilePic": "/assets/img/speakers/lion.jpg",
+        "twitter": "ionicframework",
+        "about": "Lionel is a Lion.",
+        "location": "Nantes",
+        "email": "charles-henri@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 10,
+        "name": "Pierre-Yves Aillet",
+        "profilePic": "/assets/img/speakers/mouse.jpg",
+        "twitter": "ionicframework",
+        "about": "Molly is a Mouse.",
+        "location": "Nantes",
+        "email": "pierre-yves@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 11,
+        "name": "José Paumard",
+        "profilePic": "/assets/img/speakers/puppy.jpg",
+        "twitter": "ionicframework",
+        "about": "José is a Java.",
+        "location": "Paris",
+        "email": "jose@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 12,
+        "name": "Eric Briand",
+        "profilePic": "/assets/img/speakers/rabbit.jpg",
+        "twitter": "ionicframework",
+        "about": "Rachel is a Rabbit.",
+        "location": "Nantes",
+        "email": "eric@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 13,
+        "name": "Stefan Cosquer",
+        "profilePic": "/assets/img/speakers/turtle.jpg",
+        "twitter": "ionicframework",
+        "about": "Ted is a Turtle.",
+        "location": "Nantes",
+        "email": "stefan@example.com",
+        "phone": "+1-541-754-3010"
+    },
+    {
+        "id": 14,
+        "name": "Valentin Deleplace",
+        "profilePic": "/assets/img/speakers/turtle.jpg",
+        "twitter": "ionicframework",
+        "about": "Valentin is a Googler.",
+        "location": "Paris",
+        "email": "valentin@example.com",
+        "phone": "+1-541-754-3010"
+    }
+]

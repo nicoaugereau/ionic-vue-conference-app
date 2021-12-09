@@ -1,0 +1,10 @@
+{
+    "local": {
+        "backendUrl": "http://localhost:3000",
+        "frontendUrl": "http://localhost:8081"
+    },
+    "internet": {
+        "backendUrl": "https://conponent-app-backend.example.fr",
+        "frontendUrl": "https://conponent-app-frontend.example.fr"
+    }
+}

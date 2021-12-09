@@ -1,0 +1,228 @@
+[
+    {
+        "id": 1,
+        "dateTimeStart": "2047-05-21T08:00",
+        "dateTimeEnd": "2047-05-21T09:00",
+        "name": "Accueil, Thé, Café et Pains au chocolat",
+        "location": "Hall",
+        "description": "Accueil, Thé, Café et Pains au chocolat",
+        "speakerIds": [],
+        "tracks": ["Breakfast"]
+    },
+    {
+        "id": 2,
+        "dateTimeStart": "2047-10-21T09:00",
+        "dateTimeEnd": "2047-10-21T09:40",
+        "name": "Keynote",
+        "location": "Titan",
+        "description":
+            "De la complexité à la simplicité. Antonin Fourneau montrera au travers de ses créations numériques et parfois farfelues, le cheminement d’un projet de l’émergence de l’idée, en passant par les avancées, les concessions et jusqu’à la concrétisation.",
+        "speakerIds": [1],
+        "tracks": ["Stéréolux"]
+    },
+    {
+        "id": 3,
+        "dateTimeStart": "2047-10-21T10:00",
+        "dateTimeEnd": "2047-10-21T10:50",
+        "name": "Component Driven Development",
+        "location": "Room Titan",
+        "description":
+            "How we do component driven development at Bit and how to architect your components best so you can think and work in components and therefore reuse components and scale easier and faster.",
+        "speakerIds": [2],
+        "tracks": ["Web"]
+    },
+    {
+        "id": 4,
+        "dateTimeStart": "2047-10-21T10:00",
+        "dateTimeEnd": "2047-10-21T10:50",
+        "name": "Simuler 160K joueurs avec Cloud Run",
+        "location": "Room Belem",
+        "description":
+            "Comment vérifier que le jeu Google I/O Adventure (mai 2021) tiendra la charge de 80000 connections simultanées, sans s’effondrer? Comment provisionner correctement les serveurs de jeu?",
+        "speakerIds": [],
+        "tracks": ["Cloud", "DevOps"]
+    },
+    {
+        "id": 5,
+        "dateTimeStart": "2047-10-21T11:10",
+        "dateTimeEnd": "2047-10-21T12:00",
+        "name": "How to create Pure CSS Game",
+        "location": "Room Belem",
+        "description":
+            "In this time of the coronavirus epidemic, a lot of our plans have been canceled. From every bad situation, we need to try to see the good thing in it. Elad Shechter took his free time at home to create a pure CSS game. He will explain many tips and tricks on 'how to create pure CSS games'.",
+        "speakerIds": [3],
+        "tracks": ["Web"]
+    },
+    {
+        "id": 6,
+        "dateTimeStart": "2047-10-21T11:10",
+        "dateTimeEnd": "2047-10-21T12:00",
+        "name": "Sensibilisation au numérique responsable",
+        "location": "Room Graslin",
+        "description":
+            "Atelier de sensibilisation au numérique responsable. Un atelier d’1h, sur un format ludique, avec quizz sur smartphone pour l’auditoire, pour interagir avec le public, tout le long de la conférence.",
+        "speakerIds": [4, 5],
+        "tracks": ["Discovery"]
+    },
+    {
+        "id": 7,
+        "dateTimeStart": "2047-05-17T12:00",
+        "dateTimeEnd": "2047-05-17T13:00",
+        "name": "Lunch",
+        "location": "Auditorium",
+        "description": "Come grab lunch with all the Ionic fanatics and talk all things Ionic",
+        "speakerIds": [],
+        "tracks": ["Food"]
+    },
+    {
+        "id": 8,
+        "dateTimeStart": "2047-10-21T14:00",
+        "dateTimeEnd": "2047-10-21T14:50",
+        "name": "Don't miss the Deno train",
+        "location": "Room Titan",
+        "description": "Reboot JS on the Server with Deno and Typescript.",
+        "speakerIds": [6],
+        "tracks": ["Discovery"]
+    },
+    {
+        "id": 9,
+        "dateTimeStart": "2047-10-21T14:00",
+        "dateTimeEnd": "2047-10-21T14:50",
+        "name": "Continuous Localization in Web",
+        "location": "Room Graslin",
+        "description":
+            "You will be able to follow each step we took, their benefits and shortcomings, but also be aware of a few alternative solutions we considered and that might do the job for you.",
+        "speakerIds": [7],
+        "tracks": ["Web"]
+    },
+    {
+        "id": 10,
+        "dateTimeStart": "2047-10-21T15:10",
+        "dateTimeEnd": "2047-10-21T16:00",
+        "name": "Petit guide pratique pour commencer un design system",
+        "location": "Room Titan",
+        "description":
+            "Créer et utiliser un design system apporte plein d’avantages : cohérence, réutilisabilité, amélioration de l’expérience utilisateur… comment ne pas avoir envie de se lancer et dire 'On doit faire un design system !'.",
+        "speakerIds": [8],
+        "tracks": ["UX", "UI"]
+    },
+    {
+        "id": 11,
+        "dateTimeStart": "2047-10-21T15:10",
+        "dateTimeEnd": "2047-10-21T16:00",
+        "name": "Rust, un choix possible ?",
+        "location": "Room Tour de Bretabne",
+        "description":
+            "Lorsque vous commencez un nouveau projet chez un client, vient le moment inévitable de choisir un langage. En général, un premier tri a déjà été fait et validé par le client : Java, Javascript, Python. Pourtant, Rust n’apparaît pas dans cette liste ! Et ce malgré la popularité et les avantages incontestables de ce langage merveilleux .",
+        "speakerIds": [9, 10],
+        "tracks": ["Languages"]
+    },
+    {
+        "id": 12,
+        "dateTimeStart": "2047-10-21T16:20",
+        "dateTimeEnd": "2047-10-21T17:10",
+        "name": "Java du Futur: des Record au Pattern Matching",
+        "location": "Room Titan",
+        "description": "Les langages fonctionnels ont amené trois idées fondamentales en programmation depuis les années 60..",
+        "speakerIds": [11],
+        "tracks": ["Languages"]
+    },
+    {
+        "id": 13,
+        "dateTimeStart": "2047-10-21T16:20",
+        "dateTimeEnd": "2047-10-21T17:10",
+        "name": "Dans le cloud tout est managé mais pas la sécurité",
+        "location": "Room Belem",
+        "description":
+            "L’un des principes du cloud, c’est le managé. Tout est managé, l’infrastructure, les serveurs, les bases de données etc. Mais la sécurité c’est une autre histoire. La gestion des rôles, la gestion des utilisateurs, des comptes de services, des certificats, des clés de chiffrement… vous maitrisez ?.",
+        "speakerIds": [12],
+        "tracks": ["Security"]
+    },
+    {
+        "id": 14,
+        "dateTimeStart": "2047-10-21T17:20",
+        "dateTimeEnd": "2047-10-21T17:40",
+        "name": "Machine à lire",
+        "location": "Room Titan",
+        "description":
+            "Dans le cadre d’une initiative Tech4Good avec l’ACIAH, association aidant les personnes en situation de handicap à utiliser l’outil informatique, nous avons développé bénévolement une application mobile Flutter permettant aux mal-voyants et non-voyants la lecture de documents et journaux papier.",
+        "speakerIds": [],
+        "tracks": ["mobile", "IoT"]
+    },
+    {
+        "id": 15,
+        "dateTimeStart": "2047-10-21T13:00",
+        "dateTimeEnd": "2047-10-21T13:15",
+        "name": "Ionic in the Enterprise",
+        "location": "Room 2201",
+        "description":
+            "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+        "speakerIds": [11],
+        "tracks": ["Communication"]
+    },
+    {
+        "id": 16,
+        "dateTimeStart": "2047-10-21T13:15",
+        "dateTimeEnd": "2047-10-21T13:30",
+        "name": "Ionic Worldwide",
+        "location": "Room 2201",
+        "description":
+            "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+        "speakerIds": [6],
+        "tracks": ["Communication"]
+    },
+    {
+        "id": 17,
+        "dateTimeStart": "2047-10-21T13:30",
+        "dateTimeEnd": "2047-10-21T14:00",
+        "name": "The Ionic package service",
+        "location": "Room 2203",
+        "description":
+            "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+        "speakerIds": [10, 1],
+        "tracks": ["Services"]
+    },
+    {
+        "id": 18,
+        "dateTimeStart": "2047-10-21T14:00",
+        "dateTimeEnd": "2047-10-21T14:30",
+        "name": "Push Notifications in Ionic",
+        "location": "Room 2202",
+        "description":
+            "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+        "speakerIds": [1, 2],
+        "tracks": ["Services"]
+    },
+    {
+        "id": 19,
+        "dateTimeStart": "2047-10-21T14:30",
+        "dateTimeEnd": "2047-10-21T14:45",
+        "name": "Ionic Documentation",
+        "location": "Room 2202",
+        "description":
+            "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+        "speakerIds": [3],
+        "tracks": ["Documentation"]
+    },
+    {
+        "id": 20,
+        "dateTimeStart": "2047-10-21T14:45",
+        "dateTimeEnd": "2047-10-21T15:00",
+        "name": "UX planning in Ionic",
+        "location": "Room 2203",
+        "description":
+            "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
+        "speakerIds": [7, 5],
+        "tracks": ["Design"]
+    },
+    {
+        "id": 21,
+        "dateTimeStart": "2047-05-17T18:00",
+        "dateTimeEnd": "2047-05-17T22:00",
+        "name": "Party time",
+        "location": "Auditorium",
+        "description": "Come grab lunch with all the Ionic fanatics and talk all things Ionic",
+        "speakerIds": [],
+        "tracks": ["After"]
+    }
+]

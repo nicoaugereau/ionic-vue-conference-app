@@ -1,0 +1,14 @@
+{
+    "reporterEnabled": "mocha-junit-reporter, mochawesome",
+    "mochawesomeReporterOptions": {
+        "reportDir": "reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+    },
+    "mochaJunitReporterReporterOptions": {
+        "mochaFile": "reports/results-[hash].xml"
+    }
+}

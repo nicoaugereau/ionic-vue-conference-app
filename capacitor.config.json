@@ -1,0 +1,6 @@
+{
+    "appId": "fr.nicolasaugereau.starter",
+    "appName": "heelo",
+    "bundledWebRuntime": false,
+    "webDir": "dist"
+}

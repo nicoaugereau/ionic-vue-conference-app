@@ -1,0 +1,25 @@
+{
+    "env": {
+        "COMMAND_DELAY": 50,
+        "VISIT_DELAY": 2000
+    },
+    "defaultCommandTimeout": 4000,
+    "execTimeout": 60000,
+    "taskTimeout": 60000,
+    "pageLoadTimeout": 60000,
+    "requestTimeout": 5000,
+    "responseTimeout": 30000,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "video": false,
+    "videoUploadOnPasses": false,
+    "trashAssetsBeforeRuns": true,
+    "chromeWebSecurity": false,
+    "experimentalStudio": true,
+    "component": {
+        "componentFolder": "src",
+        "testFiles": "**/*.spec.ct.{js,ts,jsx,tsx}"
+    }
+}

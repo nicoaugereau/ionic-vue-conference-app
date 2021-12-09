@@ -1,0 +1,53 @@
+{
+    "name": "cucumber-reporter",
+    "version": "1.0.0",
+    "description": "Cucumber Reporter",
+    "author": "Nicolas Augereau",
+    "license": "MIT",
+    "main": "lib/generate-report.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "homepage": "https://github.com/nicoaugereau/cucumber-reporter#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nicoaugereau/cucumber-reporter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nicoaugereau/cucumber-reporter/issues"
+    },
+    "keywords": [
+        "cucumber",
+        "html",
+        "test report",
+        "cucumber-reporter",
+        "html report",
+        "json to html"
+    ],
+    "files": [
+        "addCucumberContext.js",
+        "lib"
+    ],
+    "bundleDependencies": false,
+    "dependencies": {
+        "chalk": "^3.0.0",
+        "find": "^0.3.0",
+        "fs-extra": "^8.1.0",
+        "js-base64": "^2.5.1",
+        "jsonfile": "^5.0.0",
+        "lodash": "^4.17.19",
+        "moment": "^2.24.0",
+        "open": "^7.0.2",
+        "uuid": "^3.4.0"
+    },
+    "deprecated": false,
+    "devDependencies": {
+        "coveralls": "^3.1.0",
+        "istanbul": "^0.4.5",
+        "jasmine": "^3.5.0",
+        "np": "^6.3.2"
+    }
+}

@@ -1,0 +1,47 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "cucumberautocomplete.steps": ["cypress/support/step_definitions/*.ts"],
+  "cucumberautocomplete.syncfeatures": "cypress/integration/**/*feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "cucumberautocomplete.strictGherkinValidation": false,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": true,
+  "cucumberautocomplete.customParameters": [
+    {
+      "parameter": "\\/",
+      "value": "/"
+    },
+    {
+      "parameter": "(.*?)",
+      "value": ".*"
+    },
+    {
+      "parameter": "(\\d+)",
+      "value": "([0-9]{1,8})"
+    },
+    {
+      "parameter": "(\\d*\\.?\\d*$)",
+      "value": "([0-9]{1,8}.[0-9]{1,2})"
+    },
+    {
+      "parameter": "(\\d+-\\d+-\\d+)",
+      "value": "([0-9]{1,2}-[0-9]{1,2}-[0-9]{4})"
+    }
+  ],
+  "cucumberautocomplete.pages": {},
+  "cucumberautocomplete.skipDocStringsFormat": true,
+  "cucumberautocomplete.formatConfOverride": {
+    "And": 3,
+    "But": "relative"
+  },
+  "cucumberautocomplete.onTypeFormat": true,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  },
+  "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\(",
+  "cucumberautocomplete.stepRegExSymbol": "/"
+}
