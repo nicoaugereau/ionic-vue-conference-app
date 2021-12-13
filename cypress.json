@@ -1,4 +1,5 @@
 {
+    "projectId":"conference-app",
     "env": {
         "COMMAND_DELAY": 50,
         "VISIT_DELAY": 2000

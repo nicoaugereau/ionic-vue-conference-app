@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
 /dist
+/ios
+cypress/screenshots
+cypress/videos
+reports/*
 
 # local env files
 .env.local
