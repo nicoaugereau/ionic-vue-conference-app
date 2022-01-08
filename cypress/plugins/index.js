@@ -205,7 +205,7 @@ module.exports = (on, config) => {
       config.env.frontendUrl = environments[environment].frontendUrl;
 
       return config.env;
-    },
+    }
   });
 
   on("task", {
@@ -247,7 +247,7 @@ module.exports = (on, config) => {
       config.userAgent = configOptions.userAgent;
 
       return config;
-    },
+    }
   });
 
   let shouldSkip = false;
@@ -259,7 +259,7 @@ module.exports = (on, config) => {
     shouldSkip(value) {
       if (value != null) shouldSkip = value;
       return shouldSkip;
-    },
+    }
   });
 
   on("task", {
@@ -267,7 +267,7 @@ module.exports = (on, config) => {
       const opsys = process.platform;
       fs.emptyDirSync(folder);
       return [opsys, folder];
-    },
+    }
   });
 
   on("task", {
@@ -282,7 +282,7 @@ module.exports = (on, config) => {
           console.log("db-seed.json was copied to db.json");
         });
       });
-    },
+    }
   });
 
   return config;
