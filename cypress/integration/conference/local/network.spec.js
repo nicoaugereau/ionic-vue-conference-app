@@ -42,7 +42,9 @@ describe('Mock et erreurs réseau', () => {
         cy.visit(getVar.url)
 
         cy.wait('@getServerFailure')
-        //cy.get('[data-testid="orders-table"] div p').should('contain', errorMsg)
+        cy.get('@getServerFailure').then(res=>{
+            expect(res.response.statusCode).eq(500)
+        })
     })
 
     it('Simuler une erreur réseau', () => {
@@ -51,7 +53,9 @@ describe('Mock et erreurs réseau', () => {
         cy.visit(getVar.url)
 
         cy.wait('@getNetworkFailure')
-        //cy.get('[data-testid="orders-table"] div p').should('contain', errorMsg)
+        cy.wait('@getNetworkFailure').then(res=>{
+            expect(res.error.name).eq('Error')
+        })
     })
 
     it('Mock des données Schedules et Speakers', () => {

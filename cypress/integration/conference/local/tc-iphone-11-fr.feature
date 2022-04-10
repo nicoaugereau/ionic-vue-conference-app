@@ -15,5 +15,5 @@ Fonctionnalité: Tester l'application en version mobile
     
     Scénario: Rechercher un conférencier
         Quand je clique sur l'onglet Conférenciers
-        Et je clique sur le conférencier "Eva Eagle"
+        Et je clique sur le conférencier "Burt Bear"
         Alors le profil du conférencier est affiché

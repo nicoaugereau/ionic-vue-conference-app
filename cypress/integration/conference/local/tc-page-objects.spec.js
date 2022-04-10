@@ -7,7 +7,7 @@ const { clic, tabbar, conference, conferencier } = require('../pages/common')
 //** -_-_-_-_-_-_-_-_-_-_- **//
 const environment = 'local'
 const scheduleName = 'The evolution of Ionicons'
-const speakerName = 'Eva Eagle'
+const speakerName = 'Burt Bear'
 //** -_-_-_-_-_-_-_-_-_-_- **//
 
 describe(`Recherches`, () => {

@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "kill": "pkill node",
         "start": "npm run serve & npx wait-on http://localhost:8081",
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",

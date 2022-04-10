@@ -42,63 +42,63 @@
         },
         "iphone-5" :{
             "useragent": "Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25",
-            "viewportWidth": 640, 
-            "viewportHeight": 1136
+            "viewportWidth": 320, 
+            "viewportHeight": 568
         },
         "iphone-5s" :{
             "useragent": "Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25",
-            "viewportWidth": 640, 
-            "viewportHeight": 1136
+            "viewportWidth": 320, 
+            "viewportHeight": 568
         },
         "iphone-6" :{
             "useragent": "Mozilla/5.0 (iPad; CPU OS 9_3_5 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13G36 Safari/601.1",
-            "viewportWidth": 750, 
-            "viewportHeight": 1334
+            "viewportWidth": 375, 
+            "viewportHeight": 667
         },
         "iphone-6s" :{
-            "useragent": "Mozilla/5.0 (iPad; CPU OS 9_3_5 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13G36 Safari/601.1",
-            "viewportWidth": 750, 
-            "viewportHeight": 1334
+            "useragent": "375/5.0 (iPad; CPU OS 9_3_5 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13G36 Safari/601.1",
+            "viewportWidth": 345, 
+            "viewportHeight": 667
         },
         "iphone-6+" :{
             "useragent": "Mozilla/5.0 (iPad; CPU OS 9_3_5 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13G36 Safari/601.1",
-            "viewportWidth": 1080, 
-            "viewportHeight": 1920
+            "viewportWidth": 540, 
+            "viewportHeight": 960
         },
         "iphone-7" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.0 Mobile/14G60 Safari/602.1",
-            "viewportWidth": 750, 
-            "viewportHeight": 1334
+            "viewportWidth": 375, 
+            "viewportHeight": 667
         },
         "iphone-8" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1",
-            "viewportWidth": 750, 
-            "viewportHeight": 1334
+            "viewportWidth": 375, 
+            "viewportHeight": 667
         },
         "iphone-x" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1",
-            "viewportWidth": 1125, 
-            "viewportHeight": 2436
+            "viewportWidth": 562, 
+            "viewportHeight": 1213
         },
         "iphone-xr" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1",
-            "viewportWidth": 828, 
-            "viewportHeight": 1792
+            "viewportWidth": 414, 
+            "viewportHeight": 896
         },
         "iphone-se2" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1",
-            "viewportWidth": 750, 
-            "viewportHeight": 1334
+            "viewportWidth": 375, 
+            "viewportHeight": 667
         },
         "iphone-11" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Mobile/15E148 Safari/604.1",
-            "viewportWidth": 828, 
-            "viewportHeight": 1792
+            "viewportWidth": 414, 
+            "viewportHeight": 896
         },
         "iphone-12" :{
             "useragent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
-            "viewportWidth": 1170, 
-            "viewportHeight": 2532
+            "viewportWidth": 85, 
+            "viewportHeight": 1266
         },
         "macbook-11" :{
             "useragent": "",

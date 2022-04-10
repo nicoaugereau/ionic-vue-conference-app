@@ -6,7 +6,7 @@ import { clic, tab, conference, conferencier } from '../../../support/conf/commo
 //** -_-_-_-_-_-_-_-_-_-_- **//
 const environment = 'local'
 const scheduleName = 'The evolution of Ionicons'
-const speakerName = 'Eva Eagle'
+const speakerName = 'Burt Bear'
 //** -_-_-_-_-_-_-_-_-_-_- **//
 
 describe(`Recherches`, () => {

@@ -14,5 +14,5 @@ Feature: Tester l'application en version tablette
 
     Scenario: Rechercher un conférencier
         When je clique sur l'onglet Conférenciers
-        And je clique sur le conférencier "Eva Eagle"
+        And je clique sur le conférencier "Burt Bear"
         Then le profil du conférencier est affiché

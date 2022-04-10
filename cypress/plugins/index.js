@@ -71,19 +71,20 @@ module.exports = (on, config) => {
     on("dev-server:start", (options) =>
       startDevServer({ options, webpackConfig })
     );
+  } else {
+    // use without typescript
+    // const cucumber = require("cypress-cucumber-preprocessor").default;
+    // on("file:preprocessor", cucumber());
+    // use with typescript
+    // https://github.com/TheBrainFamily/cypress-cucumber-webpack-typescript-example
+    // Erreur import et export
+    // https://www.it-swarm-fr.com/fr/javascript/cypress-parseerror-import-et-export-peuvent-apparaitre-uniquement-avec-sourcetype-module/807823180/
+    const webpack = require("@cypress/webpack-preprocessor");
+    const options = {
+      webpackOptions: require("../webpack.config.js"),
+    };
+    on("file:preprocessor", webpack(options));
   }
-  // use without typescript
-  // const cucumber = require("cypress-cucumber-preprocessor").default;
-  // on("file:preprocessor", cucumber());
-  // use with typescript
-  // https://github.com/TheBrainFamily/cypress-cucumber-webpack-typescript-example
-  // Erreur import et export
-  // https://www.it-swarm-fr.com/fr/javascript/cypress-parseerror-import-et-export-peuvent-apparaitre-uniquement-avec-sourcetype-module/807823180/
-  const webpack = require("@cypress/webpack-preprocessor");
-  const options = {
-    webpackOptions: require("../webpack.config.js"),
-  };
-  on("file:preprocessor", webpack(options));
 
   // Cypress visual testing
   const getCompareSnapshotsPlugin = require("cypress-visual-regression/dist/plugin");
