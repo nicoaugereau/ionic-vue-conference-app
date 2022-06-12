@@ -80,7 +80,6 @@ declare global {
     }
   }
 }
-
 /**
  * Commandes personnalisées
  *

@@ -36,6 +36,6 @@ export default defineConfig({
       webpackConfig,
     },
     setupNodeEvents(on, config) {},
-    specPattern: "src/**/*.spec.ct.{js,ts,jsx,tsx}",
+    specPattern: "src/**/*.cy.{js,ts,jsx,tsx}",
   },
 });
