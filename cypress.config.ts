@@ -1,5 +1,23 @@
 import { defineConfig } from "cypress";
-import webpackConfig from "./cypress/webpack.config";
+//import webpackConfig from "./cypress/webpack.config";
+//const webpackConfig = require("@vue/cli-service/webpack.config.js");
+// const webpack = require("@cypress/webpack-dev-server");
+// const webpackConfigOptions = {
+//   module: {
+//     rules: [
+//       {
+//         test: /\.vue$/,
+//         loader: "vue-loader",
+//       },
+//     ],
+//   },
+// };
+// const options = {
+//   // send in the options from your webpack.config.js, so it works the same
+//   // as your app's code
+//   webpackConfigOptions,
+//   watchOptions: {},
+// };
 
 export default defineConfig({
   projectId: "conference-app",
@@ -31,11 +49,13 @@ export default defineConfig({
   },
   component: {
     devServer: {
-      framework: "vue",
+      framework: "vue-cli",
       bundler: "webpack",
-      webpackConfig,
+      //webpackConfig,
     },
-    setupNodeEvents(on, config) {},
+    setupNodeEvents(on, config) {
+      //on("dev-server:start", webpack(options));
+    },
     specPattern: "src/**/*.cy.{js,ts,jsx,tsx}",
   },
 });

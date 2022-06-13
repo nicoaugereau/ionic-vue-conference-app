@@ -38,7 +38,7 @@
 
 const VISIT_DELAY = Cypress.env("VISIT_DELAY") || 0;
 if (VISIT_DELAY > 0) {
-  Cypress.Commands.overwrite("visit", (originalFn, ...args) => {
+  Cypress.Commands.overwrite("visit", (originalFn, ...args): any => {
     const origVal = originalFn(...args);
 
     return new Promise((resolve) => {
@@ -57,8 +57,8 @@ if (COMMAND_DELAY > 0) {
     "clear",
     "reload",
     "contains",
-  ]) {
-    Cypress.Commands.overwrite(command, (originalFn, ...args) => {
+  ] as any) {
+    Cypress.Commands.overwrite(command, (originalFn, ...args): any => {
       const origVal = originalFn(...args);
 
       return new Promise((resolve) => {
@@ -70,52 +70,20 @@ if (COMMAND_DELAY > 0) {
   }
 }
 
-declare global {
-  namespace Cypress {
-    interface Chainable {
-      environnement(env: string): Chainable<void>;
-      screen(device: string, mode?: string): Chainable<any>;
-      setVar(name: string, value: string): Chainable<any>;
-      setElement(value: string, propName: string): Chainable<any>;
-    }
+declare namespace Cypress {
+  interface Chainable {
+    environnement(env: string): Chainable<void>;
+    screen(device: string, mode?: string): Chainable<any>;
   }
 }
-/**
- * Commandes personnalisées
- *
- * Ajouter const { getVar, getElement } = require('support/commands.js')
- *
- * Usage :
- * cy.setVar('nomVariable', valeur)
- * console.log(getVar.nomVariable)
- *
- * cy.title().setElement('nomElement')
- * cy.get('.my-element').constains(getElement.nomElement)
- */
-// Sauve une donnée en variable
-export const getVar: any = {};
-Cypress.Commands.add("setVar", (name: string, value) => {
-  if (value) {
-    getVar[name] = value;
-  }
-  return getVar[name];
-});
-// Sauve les données d'un élément
-export const getElement: any = {};
-Cypress.Commands.add("setElement", { prevSubject: true }, (value, propName) => {
-  console.log("setElement", value, propName);
-  getElement[propName] = value;
-  return value;
-});
-
 /**
  * Configuration de l'environnement de test
  */
 Cypress.Commands.add("environnement", (env) => {
   cy.task("getConfiguration", env).then((c: any) => {
-    cy.setVar("env", c.env);
-    cy.setVar("backendUrl", c.backendUrl);
-    cy.setVar("frontendUrl", c.frontendUrl);
+    sessionStorage.setItem("env", c.env);
+    sessionStorage.setItem("backendUrl", c.backendUrl);
+    sessionStorage.setItem("frontendUrl", c.frontendUrl);
   });
 });
 /**

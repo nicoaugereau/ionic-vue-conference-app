@@ -7,9 +7,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import { clic, conference, conferencier, tab, titre } from "../conf/common";
 
-//import { getVar } from '../commands'
-const { getVar } = require("../commands.ts");
-
 // Définition des conditions de test
 Given(/^le navigateur est paramétré pour "(.*?)"$/, (d) => {
   cy.screen(d).then(() => {
@@ -33,14 +30,17 @@ Given(
 Given(
   /^(l'utilisateur|je) teste sur l'environnement (local|internet)$/,
   (a, environment) => {
-    cy.setVar("env", environment);
+    sessionStorage.setItem("env", environment);
   }
 );
 
 Given(/^(l'utilisateur ouvre|j'ouvre) l'application "(.*?)"$/, (a, website) => {
-  cy.environnement(getVar.env).then((websiteUrl) => {
-    cy.visit(websiteUrl);
-  });
+  cy.environnement(sessionStorage.getItem("env") as any).then(
+    (websiteUrl: any) => {
+      sessionStorage.setItem("url", websiteUrl.frontendUrl);
+      cy.visit(websiteUrl.frontendUrl);
+    }
+  );
 });
 Given(/^(l'utilisateur est|je suis) sur l'onglet "(.*?)"$/, (a, conf) => {
   //cy.get('[data-testid="page-title"]').scrollIntoView().should('have.text', title)
@@ -62,7 +62,7 @@ When(/^(l'utilisateur|je) clique sur "(.*?)"$/, (a, clicAction) => {
   //clic.bouton = clicAction
 });
 When(/^(l'utilisateur|je) clique sur la conférence$/, () => {
-  clic({ conf: getVar.conference });
+  clic({ conf: sessionStorage.getItem("conference") });
 });
 When(
   /^(l'utilisateur|je) clique sur l'onglet (Conférences|Conférenciers|Carte|A propos)$/,
@@ -85,15 +85,18 @@ Then(/^l'application redirige vers l'onglet "(.*?)"$/, (title) => {
 Then(/^la conférence est affichée dans le résultat de recherches$/, () => {
   // cy.setVar('orderName', orderName)
   // cy.get('[data-testid="table"]').should('contain', orderName)
-  conference({ title: getVar.conference, control: true });
+  conference({ title: sessionStorage.getItem("conference"), control: true });
   //conferences.nom = orderName
 });
 Then(/^le détail de la conférence est affiché$/, () => {
   // cy.setVar('orderName', orderName)
   // cy.get('[data-testid="table"]').should('contain', orderName)
-  conference({ detail: getVar.conference, control: true });
+  conference({ detail: sessionStorage.getItem("conference"), control: true });
   //conferences.nom = orderName
 });
 Then(/^le profil du conférencier est affiché$/, () => {
-  conferencier({ profil: getVar.conferencier, control: true });
+  conferencier({
+    profil: sessionStorage.getItem("conferencier"),
+    control: true,
+  });
 });

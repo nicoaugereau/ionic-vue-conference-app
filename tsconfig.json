@@ -11,7 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["webpack-env", "cypress"],
+    "types": ["webpack-env"],
     "paths": {
       "@/*": ["src/*"]
     },
@@ -22,8 +22,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx",
-    "cypress.d.ts"
+    "tests/**/*.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/**/*.cy.ts"]
 }
