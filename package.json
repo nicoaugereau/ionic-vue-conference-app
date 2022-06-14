@@ -18,10 +18,10 @@
     "cy2:run": "export CYPRESS_API_URL=http://localhost:1234 && npx cy2 run --record --key conference --parallel --ci-build `date +%s`"
   },
   "dependencies": {
-    "@capacitor/android": "3.3.2",
-    "@capacitor/cli": "3.3.2",
-    "@capacitor/core": "3.3.2",
-    "@capacitor/ios": "3.3.2",
+    "@capacitor/android": "^3.5.1",
+    "@capacitor/cli": "^3.5.1",
+    "@capacitor/core": "^3.5.1",
+    "@capacitor/ios": "3.5.1",
     "@cypress/browserify-preprocessor": "^3.0.2",
     "@ionic/cli": "^6.18.1",
     "@ionic/core": "4.1.2",
@@ -36,8 +36,6 @@
   },
   "devDependencies": {
     "@cypress/vue": "^2.2.3",
-    "@cypress/webpack-dev-server": "^1.7.0",
-    "@cypress/webpack-preprocessor": "^5.10.0",
     "@typescript-eslint/parser": "^5.6.0",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
