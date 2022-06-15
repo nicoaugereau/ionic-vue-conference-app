@@ -1,8 +1,10 @@
-# Ionic Vue Conference Application
+# Ionic Vue Conference Application with Cypress framework
 
-This application is purely a kitchen-sink demo of the Ionic Framework and Vue.
+This application is purely a kitchen-sink demo of the Ionic Framework and Vue with Cypress framework for End-to-End and Component testing.
 
 **There is not an actual Ionic Conference at this time.** This project is just to show off Ionic components in a real-world application.
+
+From [Ionic Team](https://github.com/ionic-team)
 
 ## React and Angular versions
 
@@ -15,6 +17,7 @@ https://github.com/ionic-team/ionic-conference-app
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+- [Build the mobile app](#build-the-mobile-app)
 - [App Preview](#app-preview)
 
 ## Getting Started
@@ -33,14 +36,16 @@ https://github.com/ionic-team/ionic-conference-app
 - Run Cocoapods and open the `Podfile`in the `ios` directory
 - If Cocoapods < v 1.6 then comment the line`install! 'cocoapods', :disable_input_output_paths => true` and click Install
 - Run `ionic capacitor open ios` or `ionic capacitor open android`
-- Update the app: Run `ionic capacitor copy ios` or `ionic capacitor open android`
+- If you make changes, update the app: Run `ionic capacitor copy ios` or `ionic capacitor open android`
 
 ### Errors
 
 - Cycle in dependencies (XCode), run in terminal:
 
+```
   cd Library/Developer/Xcode/
   rm -r DerivedData/
+```
 
 ## App Preview
 

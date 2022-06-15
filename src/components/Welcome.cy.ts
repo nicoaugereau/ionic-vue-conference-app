@@ -21,7 +21,19 @@ describe("Welcome", () => {
       },
     });
 
-    cy.get("button").contains("Log Out").click();
-    cy.get("@onLogout").should("have.been.called");
+    const EventEmitter = require("events");
+    const myEE = new EventEmitter();
+    myEE.on("click", () => {});
+
+    cy.get("button")
+      .contains("Log Out")
+      .click()
+      .then(() => {
+        expect(myEE.eventNames()).to.have.length(1);
+        //expect(spy).to.be.calledOnce;
+      });
+
+    // cy.get("button").contains("Log Out").click();
+    // cy.get("@onLogout").should("have.been.called");
   });
 });

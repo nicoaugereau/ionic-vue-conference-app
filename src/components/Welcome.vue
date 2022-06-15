@@ -1,9 +1,7 @@
 <template>
   <div class="max-w-screen-sm p-12 mx-auto bg-gray-50 rounded-md shadow-lg">
     <h1 class="text-2xl">Welcome {{ username }}!</h1>
-    <Button class="mt-2" @click="handleLogout" @logout="$emit('logout')"
-      >Log Out</Button
-    >
+    <Button class="mt-2" @click="handleLogout">Log Out</Button>
   </div>
 </template>
 
@@ -16,6 +14,7 @@ export default Vue.extend({
   },
   props: {
     username: String,
+    onLogout: String,
   },
   methods: {
     handleLogout() {

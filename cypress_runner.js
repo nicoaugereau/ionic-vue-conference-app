@@ -8,19 +8,14 @@
  *
  * https://medium.com/cypress-io-thailand/generate-a-beautiful-test-report-from-running-tests-on-cypress-io-371c00d7865a
  */
-const v8 = require('v8')
-const totalHeapSize = v8.getHeapStatistics().total_available_size
-const totalHeapSizeGb = (totalHeapSize / 1024 / 1024 / 1024).toFixed(2)
-console.log('totalHeapSizeGb: ', totalHeapSizeGb)
 
 const cypress = require('cypress')
 const yargs = require('yargs')
 const shell = require('shelljs')
-//const { warnHack } = require('./common/tools')
 const argv = yargs
     .scriptName('cypress_runner')
     .usage('Usage: $0 -a [application] -e [env] -b [browser] -s [spec] [option: testname]')
-    .example('node ./cypress_runner.js -e r1 -b chrome -s js 2-e2e/MAAF/adhesion-papier-2a-3p-obtention-decision.spec')
+    .example('node ./cypress_runner.js -e local -b chrome -s js 2-e2e/local/conference/network.spec')
     .options({
         app: {
             alias: 'a',
@@ -30,25 +25,25 @@ const argv = yargs
         },
         env: {
             alias: 'e',
-            describe: 'Environnement sur lequel exécuter les tests (**=tous)',
+            describe: 'Environment',
             default: 'local',
             choices: ['local', 'internet']
         },
         browser: {
             alias: 'b',
-            describe: 'Navigateur',
+            describe: 'Browser',
             default: 'electron',
             choices: ['chrome', 'electron', 'firefox', 'edge']
         },
         spec: {
             alias: 's',
-            describe: 'Format des tests exécutés',
+            describe: 'js tests or feature',
             default: 'feature',
             choices: ['js', 'feature']
         },
         type: {
             alias: 't',
-            describe: 'Type de régression visuelle : base = création captures écrans ; actual = comparaison',
+            describe: 'Visual regression : base = create screenshots ; actual = comparison',
             default: 'actual',
             choices: ['base', 'actual']
         }
@@ -59,7 +54,7 @@ const argv = yargs
 shell.rm('-rf', `reports/**/*.json`)
 shell.rm('-rf', `reports/*.xml`)
 
-var specs = argv._ != '' ? `cypress/integration/${argv.app}/${argv.env}/${argv._}.${argv.spec}` : `cypress/integration/${argv.app}/${argv.env}/**/*.${argv.spec}`
+var specs = argv._ != '' ? `cypress/e2e/${argv.app}/${argv.env}/${argv._}.${argv.spec}` : `cypress/e2e/${argv.app}/${argv.env}/**/*.${argv.spec}`
 var cibuildid = argv['ci-build-id'] != null ? 'ci-build-id=' + argv['ci-build-id'] : ''
 var regression = argv['type'] == 'base' ? 'type=base' : 'type=actual'
 var envConfig = [cibuildid, regression]
@@ -73,7 +68,7 @@ cypress
         spec: specs
     })
     .then(infos => {
-        let status = infos.status == 'failed' ? 'Fichier(s) non trouvé(s)' : generateReport({ infos: infos, spec: argv.spec, app: argv.app })
+        let status = infos.status == 'failed' ? 'File(s) not found' : generateReport({ infos: infos, spec: argv.spec, app: argv.app })
         return status
     })
     .catch(error => {
@@ -110,7 +105,7 @@ function generateReport(options) {
                 }
             },
             customData: {
-                data: [{ label: 'Projet', value: projects[options.app].name }, { label: 'Version', value: projects[options.app].version }]
+                data: [{ label: 'Project', value: projects[options.app].name }, { label: 'Version', value: projects[options.app].version }]
             }
         }
         merge(reportOptions)
@@ -176,8 +171,8 @@ function generateReport(options) {
             reportPath: htmlReportDir,
             displayDuration: true,
             useCDN: false,
-            pageTitle: 'Tests automatisés',
-            reportName: `Rapport des tests automatisés`,
+            pageTitle: 'Automated tests',
+            reportName: `Automated tests report`,
             metadata: {
                 browser: {
                     name: options.infos.browserName,
@@ -186,7 +181,7 @@ function generateReport(options) {
                 device: deviceName,
                 app: {
                     name: 'Docker cypress/included',
-                    version: '9.1.0'
+                    version: '10.1.0'
                 },
                 platform: {
                     name: options.infos.osName,
@@ -196,9 +191,9 @@ function generateReport(options) {
             customData: {
                 title: 'Run infos',
                 data: [
-                    { label: 'Début', value: toLocalDateTime(options.infos.startedTestsAt) },
-                    { label: 'Fin', value: toLocalDateTime(options.infos.endedTestsAt) },
-                    { label: 'Projet', value: projects[options.app].name },
+                    { label: 'Start', value: toLocalDateTime(options.infos.startedTestsAt) },
+                    { label: 'End', value: toLocalDateTime(options.infos.endedTestsAt) },
+                    { label: 'Project', value: projects[options.app].name },
                     { label: 'Version', value: projects[options.app].version }
                 ]
             }

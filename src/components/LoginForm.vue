@@ -1,31 +1,29 @@
 <template>
-  <div class="max-w-screen-sm p-12 mx-auto bg-gray-50 rounded-md shadow-lg">
-    <form @submit.prevent="handleFormSubmit" class="flex flex-col">
-      <fieldset>
-        <legend class="text-3xl text-gray-800 mb-4">{{ title }}</legend>
-        <InputField
-          name="username"
-          type="text"
-          label="Username"
-          :submitted="submitted"
-          requiredMessage="Username is required"
-          auto-complete="username"
-          v-model="username"
-        ></InputField>
-        <InputField
-          name="password"
-          type="password"
-          label="Password"
-          :submitted="submitted"
-          requiredMessage="Password is required"
-          auto-complete="current-password"
-          v-model="password"
-        ></InputField>
-        <Button type="submit">Login</Button>
-        <div class="text-red-500 mt-2">
-          {{ errorMessage }}
-        </div>
-      </fieldset>
+  <div class="signupSection">
+    <form @submit.prevent="handleFormSubmit" class="signupForm">
+      <h2 class="text-3xl text-gray-800 mb-4">{{ title }}</h2>
+      <InputField
+        name="username"
+        type="text"
+        label="Username"
+        :submitted="submitted"
+        requiredMessage="Username is required"
+        auto-complete="username"
+        v-model="username"
+      ></InputField>
+      <InputField
+        name="password"
+        type="password"
+        label="Password"
+        :submitted="submitted"
+        requiredMessage="Password is required"
+        auto-complete="current-password"
+        v-model="password"
+      ></InputField>
+      <Button type="submit">Login</Button>
+      <div class="text-red-500 mt-2">
+        {{ errorMessage }}
+      </div>
     </form>
   </div>
 </template>
@@ -83,27 +81,35 @@ export default {
 </script>
 
 <style scoped>
-.login-form {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+/* @import "https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"; */
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #111;
+}
+.signupSection {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 500px;
+  height: 450px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: black;
 }
-.login-form fieldset,
-.login-form label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+h2 {
+  padding-top: 30px;
+  font-weight: 300;
 }
-.login-form fieldset {
-  border: 1px solid lightgray;
-  padding: 10px 80px;
-}
-.login-form input,
-.login-form button {
-  margin: 4px 0;
-}
-.login-form .error {
-  margin: -2px 0 4px 0;
-  color: red;
+.signupForm {
+  width: 80%;
+  padding: 30px 0;
+  transition: 0.2s;
 }
 </style>

@@ -3,9 +3,9 @@
     {{ label }}:
     <input
       v-bind="$attrs"
-      class="p-2 text-gray-500 focus:outline-none border-2"
+      class="inputFields"
       :value="value"
-      @input="$emit('handleChange', $emit.target.value)"
+      @input="handleChange"
     />
     <span class="text-red-500 mt-2" v-if="submitted && !value">{{
       requiredMessage
@@ -44,3 +44,21 @@ export default Vue.extend({
 //   }
 // }
 </script>
+
+<style scoped>
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #3f51b5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+  outline: none;
+}
+span {
+  display: block;
+}
+</style>

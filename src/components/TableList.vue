@@ -61,6 +61,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { observable } from "vue/types/umd";
 export default Vue.extend({
   data() {
     return {
@@ -74,7 +75,7 @@ export default Vue.extend({
       const contact = {
         name: this.name,
         surname: this.surname,
-      };
+      } as never;
       this.contacts.push(contact);
       console.log(this.contacts);
     },
