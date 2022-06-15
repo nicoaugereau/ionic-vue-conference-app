@@ -17,7 +17,7 @@ const path = require("path");
 const downloadPath = path.join(__dirname, "..", "downloads");
 
 // Chrome options
-const options = [
+const browserOptions = [
   /* TODO : https://peter.sh/experiments/chromium-command-line-switches/
     there is still a whole bunch of stuff to disable
   */
@@ -62,29 +62,56 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 
-  if (config.testingType === "component") {
-    const { startDevServer } = require("@cypress/webpack-dev-server");
+  // if (config.testingType === "component") {
+  //   // const { startDevServer } = require("@cypress/webpack-dev-server");
+  //   // // Vue's Webpack configuration
+  //   // const webpackConfig = require("@vue/cli-service/webpack.config.js");
 
-    // Vue's Webpack configuration
-    const webpackConfig = require("@vue/cli-service/webpack.config.js");
+  //   // on("dev-server:start", (options) =>
+  //   //   startDevServer({ options, webpackConfig })
+  //   // );
 
-    on("dev-server:start", (options) =>
-      startDevServer({ options, webpackConfig })
-    );
-  } else {
-    // use without typescript
-    // const cucumber = require("cypress-cucumber-preprocessor").default;
-    // on("file:preprocessor", cucumber());
-    // use with typescript
-    // https://github.com/TheBrainFamily/cypress-cucumber-webpack-typescript-example
-    // Erreur import et export
-    // https://www.it-swarm-fr.com/fr/javascript/cypress-parseerror-import-et-export-peuvent-apparaitre-uniquement-avec-sourcetype-module/807823180/
-    const webpack = require("@cypress/webpack-preprocessor");
-    const options = {
-      webpackOptions: require("../webpack.config.js"),
-    };
-    on("file:preprocessor", webpack(options));
-  }
+  //   const webpack = require("@cypress/webpack-dev-server");
+  //   const webpackConfigOptions = {
+  //     module: {
+  //       rules: [
+  //         {
+  //           test: /\.vue$/,
+  //           loader: "vue-loader",
+  //         },
+  //       ],
+  //     },
+  //   };
+  //   const options = {
+  //     // send in the options from your webpack.config.js, so it works the same
+  //     // as your app's code
+  //     webpackConfigOptions,
+  //     watchOptions: {},
+  //   };
+  //   on("dev-server:start", webpack(options));
+  // } else {
+  //   // use without typescript
+  //   // const cucumber = require("cypress-cucumber-preprocessor").default;
+  //   // on("file:preprocessor", cucumber());
+  //   // use with typescript
+  //   // https://github.com/TheBrainFamily/cypress-cucumber-webpack-typescript-example
+  //   // Erreur import et export
+  //   // https://www.it-swarm-fr.com/fr/javascript/cypress-parseerror-import-et-export-peuvent-apparaitre-uniquement-avec-sourcetype-module/807823180/
+  //   const webpack = require("@cypress/webpack-preprocessor");
+  //   const webpackConfigOptions = {
+  //     webpackOptions: require("../webpack.config.js"),
+  //   };
+  //   on("file:preprocessor", webpack(webpackConfigOptions));
+  // }
+
+  // Without webpack
+  const cucumber = require("cypress-cucumber-preprocessor").default;
+  const browserify = require("@cypress/browserify-preprocessor");
+  const options = {
+    ...browserify.defaultOptions,
+    typescript: require.resolve("typescript"),
+  };
+  on("file:preprocessor", cucumber(options));
 
   // Cypress visual testing
   const getCompareSnapshotsPlugin = require("cypress-visual-regression/dist/plugin");
@@ -118,7 +145,7 @@ module.exports = (on, config) => {
       //launchOptions.args.push('--cast-initial-screen-height=' + height)
       launchOptions.args.push(`--window-size=${width},${height}`);
       launchOptions.args.push("--force-device-scale-factor=1");
-      launchOptions.args.push(options);
+      launchOptions.args.push(browserOptions);
       // change download directory
       // https://docs.cypress.io/api/plugins/browser-launch-api.html#Change-download-directory
       // https://github.com/cypress-io/cypress/issues/949
@@ -206,7 +233,7 @@ module.exports = (on, config) => {
       config.env.frontendUrl = environments[environment].frontendUrl;
 
       return config.env;
-    }
+    },
   });
 
   on("task", {
@@ -248,7 +275,7 @@ module.exports = (on, config) => {
       config.userAgent = configOptions.userAgent;
 
       return config;
-    }
+    },
   });
 
   let shouldSkip = false;
@@ -260,7 +287,7 @@ module.exports = (on, config) => {
     shouldSkip(value) {
       if (value != null) shouldSkip = value;
       return shouldSkip;
-    }
+    },
   });
 
   on("task", {
@@ -268,7 +295,7 @@ module.exports = (on, config) => {
       const opsys = process.platform;
       fs.emptyDirSync(folder);
       return [opsys, folder];
-    }
+    },
   });
 
   on("task", {
@@ -283,7 +310,7 @@ module.exports = (on, config) => {
           console.log("db-seed.json was copied to db.json");
         });
       });
-    }
+    },
   });
 
   return config;
