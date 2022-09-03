@@ -46,7 +46,6 @@ export default defineConfig({
       return require("./cypress/plugins/index.js")(on, config);
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature,features}",
-    experimentalStudio: true,
   },
   component: {
     devServer: {
